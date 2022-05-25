@@ -1,19 +1,20 @@
-package controller;
+package com.example.demo.controller;
 
 
-import Dto.*;
+
+import com.example.demo.Dto.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.CommonService;
+import com.example.demo.service.CommonService;
 
 import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping(value="/api/v1/machinery")
+@RequestMapping(value="api/v1/machinery")
 @CrossOrigin
 @RequiredArgsConstructor
 public class CommonController {

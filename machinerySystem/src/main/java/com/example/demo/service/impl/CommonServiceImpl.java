@@ -1,18 +1,18 @@
-package service.impl;
+package com.example.demo.service.impl;
 
-import Dto.*;
-import entity.Customer;
-import entity.Machine;
-import entity.RentDetail;
+import com.example.demo.Dto.*;
+import com.example.demo.entity.Customer;
+import com.example.demo.entity.Machine;
+import com.example.demo.entity.RentDetail;
+import com.example.demo.service.CommonService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import repository.CustomerRepository;
-import repository.MachineRepository;
-import repository.RentDetailRepository;
-import service.CommonService;
-import exception.CustomServiceException;
+import com.example.demo.repository.CustomerRepository;
+import com.example.demo.repository.MachineRepository;
+import com.example.demo.repository.RentDetailRepository;
+import com.example.demo.exception.CustomServiceException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,9 +64,15 @@ public class CommonServiceImpl implements CommonService {
         int quantity = machineRentDto.getQuantity();
         int noOfDays = machineRentDto.getNoOfDays();
         long fee = machine.getDailyRentalFee();
-        long total=(long)quantity * (long)noOfDays * fee;
+        System.out.println(quantity);
+        System.out.println(noOfDays);
+        System.out.println(fee);
+        long total=((long)quantity) * ((long)noOfDays) * fee;
+        System.out.println(total);
         RentDetail rentDetail = new RentDetail(machineRentDto.getQuantity(),machineRentDto.getNoOfDays(),total,customer,machine);
+        System.out.println(rentDetail);
         rentDetailRepository.save(rentDetail);
+        //rentDetailRepository.save(rentDetail);
         return total;
     }
 

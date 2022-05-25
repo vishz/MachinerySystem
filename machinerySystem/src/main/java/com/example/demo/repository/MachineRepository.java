@@ -1,6 +1,6 @@
-package repository;
+package com.example.demo.repository;
 
-import entity.Machine;
+import com.example.demo.entity.Machine;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MachineRepository extends JpaRepository<Machine, Long> {

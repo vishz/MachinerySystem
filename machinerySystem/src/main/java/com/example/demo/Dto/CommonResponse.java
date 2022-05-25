@@ -1,4 +1,4 @@
-package Dto;
+package com.example.demo.Dto;
 
 public class CommonResponse<T> {
 

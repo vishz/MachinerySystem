@@ -1,4 +1,4 @@
-package entity;
+package com.example.demo.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +18,7 @@ public class RentDetail {
     private Long id;
     private int quantity;
     private int noOfDays;
+
     @CreationTimestamp
     private Date date;
     private Long total;
