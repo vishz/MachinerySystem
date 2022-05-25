@@ -22,11 +22,11 @@ public class RentDetail {
     @CreationTimestamp
     private Date date;
     private Long total;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "machine_id")
     private Machine machine;
 
