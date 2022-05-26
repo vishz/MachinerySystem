@@ -52,7 +52,7 @@ public class CommonServiceImpl implements CommonService {
         List<Machine> machineList= machineRepository.findAll();
         List<MachineListDto> machineListDtoList = new ArrayList<>();
         for (Machine machine : machineList) {
-            machineListDtoList.add(new MachineListDto(machine.getId(),machine.getName()));
+            machineListDtoList.add(new MachineListDto(machine.getId(),machine.getCode(),machine.getName(),machine.getDailyRentalFee()));
         }
         return machineListDtoList;
     }

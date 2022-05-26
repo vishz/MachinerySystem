@@ -9,5 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class MachineListDto {
     private Long id;
+    private int code;
     private String name;
+    private Long dailyRentalFee;
 }
